@@ -1,0 +1,548 @@
+<style>
+    body {
+        margin: 0;
+        background-color: #C4F2F2;
+    }
+
+    @keyframes slidedown {
+        from {
+            transform: translateY(-50%);
+        }
+
+        to {
+            transform: translateY(-8%);
+        }
+    }
+
+    @keyframes rotatedown {
+        from {
+            transform: rotate(-90deg);
+        }
+
+        to {
+            transform: rotate(3deg);
+        }
+    }
+
+    @keyframes rotateup {
+        from {
+            transform: rotate(3deg);
+        }
+
+        to {
+            transform: rotate(-90deg);
+        }
+    }
+
+    @keyframes slideup {
+        from {
+            transform: translateY(-8%);
+        }
+
+        to {
+            transform: translateY(-100%);
+        }
+    }
+
+    .sidebar_container {
+        width: 220px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        background-color: #F2F2F2;
+        display: flex;
+        flex-direction: column;
+        overflow-x: hidden;
+        overflow-y: inherit;
+    }
+
+    .company_name {
+        width: 220px;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+    }
+
+    #favicon_logo {
+        width: 33px;
+        height: 30px;
+        margin-right: 8px;
+        margin-left: -16px;
+        border-radius: 2px;
+        filter: hue-rotate(170deg);
+    }
+
+    #dashboard_logo {
+        width: 15px;
+        height: 15px;
+        margin-left: -2px;
+    }
+
+    .text1 {
+        color: #29A7D9;
+        font-size: larger;
+    }
+
+    .sidebar_fields {
+        display: flex;
+        margin-top: 3px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        height: inherit;
+        flex-wrap: wrap;
+    }
+
+    #sidebar_field_bars1 {
+        border: 0;
+        color: #4eb4bf;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        width: 190px;
+        justify-content: space-between;
+        font-family: Verdana, Geneva, Tahoma, sans-serif, Tahoma, sans-serif;
+        position: relative;
+        z-index: 99 !important;
+    }
+
+    #sidebar_field_bars1:hover {
+        background-color: #C4F2F2;
+        width: 220px;
+        color: #42b9e8;
+        z-index: 99 !important;
+        transition: 500ms;
+    }
+
+    #sidebar_field_bars2 {
+        border: 0;
+        color: #4eb4bf;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        width: 190px;
+        justify-content: space-between;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        z-index: 99 !important;
+    }
+
+    #sidebar_field_bars2:hover {
+        background-color: #C4F2F2;
+        width: 220px;
+        color: #42b9e8;
+        z-index: 99 !important;
+        transition: 500ms;
+    }
+
+    #sidebar_field_bars3 {
+        border: 0;
+        color: #4eb4bf;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        width: 190px;
+        justify-content: space-between;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        z-index: 99 !important;
+    }
+
+    #sidebar_field_bars3:hover {
+        background-color: #C4F2F2;
+        width: 220px;
+        color: #42b9e8;
+        z-index: 99 !important;
+        transition: 500ms;
+    }
+
+    #sidebar_field_bars4 {
+        border: 0;
+        color: #4eb4bf;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        width: 190px;
+        justify-content: space-between;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        z-index: 99 !important;
+    }
+
+    #sidebar_field_bars4:hover {
+        background-color: #C4F2F2;
+        width: 220px;
+        color: #42b9e8;
+        z-index: 99 !important;
+        transition: 500ms;
+    }
+
+    #sidebar_field_bars5 {
+        border: 0;
+        color: #4eb4bf;
+        height: 50px;
+        align-items: center;
+        display: flex;
+        cursor: pointer;
+        width: 190px;
+        justify-content: space-between;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        position: relative;
+        z-index: 99 !important;
+    }
+
+    #sidebar_field_bars5:hover {
+        background-color: #C4F2F2;
+        width: 220px;
+        color: #42b9e8;
+        z-index: 99 !important;
+        transition: 500ms;
+    }
+
+    #sidebar_heading_2 {
+        width: 190px;
+        height: 55px;
+        display: flex;
+        color: #29A7D9;
+        flex-direction: row;
+        align-items: center;
+        font-size: large;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        align-content: center;
+        border: 0;
+        cursor: pointer;
+
+    }
+
+    #dropdown_logo1 {
+        width: 15px;
+        height: 15px;
+        transform: rotate(-90deg);
+        position: fixed;
+        left: 190px;
+    }
+
+    #dropdown_logo2 {
+        width: 15px;
+        height: 15px;
+        transform: rotate(-90deg);
+        position: fixed;
+        left: 190px;
+    }
+
+    #dropdown_logo3 {
+        width: 15px;
+        height: 15px;
+        transform: rotate(-90deg);
+        position: fixed;
+        left: 190px;
+    }
+
+    #dropdown_logo4 {
+        width: 15px;
+        height: 15px;
+        transform: rotate(-90deg);
+        position: fixed;
+        left: 190px;
+    }
+
+    #dropdown_logo5 {
+        width: 15px;
+        height: 15px;
+        transform: rotate(-90deg);
+        position: fixed;
+        left: 190px;
+    }
+
+    #popup1 {
+        width: 120px;
+        height: 80px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        display: none;
+        position: relative;
+    }
+
+    #popup2 {
+        width: 150px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        display: none;
+    }
+
+    #popup3 {
+        width: 150px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        display: none;
+    }
+
+    #popup4 {
+        width: 150px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        display: none;
+    }
+
+    #popup5 {
+        width: 150px;
+        height: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        display: none;
+    }
+
+    #main_popup_box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .slidedown {
+        animation-name: slidedown;
+        animation-duration: 400ms;
+        animation-timing-function: ease-in;
+        animation-fill-mode: forwards;
+    }
+
+    .slideup {
+        animation-name: slideup;
+        animation-duration: 400ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .rotatedown {
+        animation-name: rotatedown;
+        animation-duration: 400ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .rotateup {
+        animation-name: rotateup;
+        animation-duration: 400ms;
+        animation-timing-function: ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .popup_inner_buttons {
+        width: 150px;
+        height: 20px;
+        display: flex;
+        align-content: flex-start;
+        border: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        cursor: pointer;
+        color: #70898c;
+        position: relative;
+        z-index: 99 !important;
+
+    }
+
+    .popup_inner_buttons:hover {
+        width: 150px;
+        font-size: large;
+        transition: 100ms;
+    }
+</style>
+
+<div>
+    <div class="sidebar_container">
+        <div class="company_name">
+            <img id="favicon_logo" src="B:\Side_works\sidebar\images\icon-star.svg">
+            <div class="text1"><b>
+                    <h1>Favicon</h1>
+                </b></div>
+        </div>
+        <div class="sidebar_fields">
+            <div><button id="sidebar_heading_2"><img id="dashboard_logo"
+                        src="B:\Side_works\sidebar\images\Dashboard_image.svg">
+                    <h2><b>Dashboard</b></h2>
+                </button></div>
+            <div>
+                <div id="main_popup_box">
+                    <div><button id="sidebar_field_bars1">
+                            <h2><b>Checks</b></h2><img id="dropdown_logo1"
+                                src="B:\Side_works\sidebar\images\dropdown.svg">
+                        </button></div>
+                    <div id="popup1" class="popup">
+                        <div><button class="popup_inner_buttons" id="popup_text">name</button> </div>
+                        <div><button id="popup_text" class="popup_inner_buttons">class</button></div>
+                    </div>
+                </div>
+                <div id="main_popup_box">
+                    <div><button id="sidebar_field_bars2">
+                            <h2><b>Pages</b></h2><img id="dropdown_logo2"
+                                src="B:\Side_works\sidebar\images\dropdown.svg">
+                        </button></div>
+                    <div id="popup2" class="popup">
+                        <div><button class="popup_inner_buttons" id="popup_text">name</button> </div>
+                        <div><button class="popup_inner_buttons" id="popup_text">class</button></div>
+                    </div>
+                </div>
+                <div id="main_popup_box">
+                    <div><button id="sidebar_field_bars3">
+                            <h2><b>Verification</b></h2><img id="dropdown_logo3"
+                                src="B:\Side_works\sidebar\images\dropdown.svg">
+                        </button></div>
+                    <div id="popup3" class="popup">
+                        <div><button id="popup_text" class="popup_inner_buttons">name</button> </div>
+                        <div><button id="popup_text" class="popup_inner_buttons">class</button></div>
+                    </div>
+                </div>
+                <div id="main_popup_box">
+                    <div><button id="sidebar_field_bars4">
+                            <h2><b>Components</b></h2><img id="dropdown_logo4"
+                                src="B:\Side_works\sidebar\images\dropdown.svg">
+                        </button></div>
+                    <div id="popup4" class="popup">
+                        <div><button id="popup_text" class="popup_inner_buttons">name</button> </div>
+                        <div><button id="popup_text" class="popup_inner_buttons">class</button></div>
+                    </div>
+                </div>
+                <div id="main_popup_box">
+                    <div><button id="sidebar_field_bars5">
+                            <h2><b>Login</b></h2><img id="dropdown_logo5"
+                                src="B:\Side_works\sidebar\images\dropdown.svg">
+                        </button></div>
+                    <div id="popup5" class="popup">
+                        <div><button id="popup_text" class="popup_inner_buttons">name</button> </div>
+                        <div><button id="popup_text" class="popup_inner_buttons">class</button></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    const field_buttons1 = document.getElementById("sidebar_field_bars1");
+    const field_buttons2 = document.getElementById("sidebar_field_bars2");
+    const field_buttons3 = document.getElementById("sidebar_field_bars3");
+    const field_buttons4 = document.getElementById("sidebar_field_bars4");
+    const field_buttons5 = document.getElementById("sidebar_field_bars5");
+    const dropdown1 = document.getElementById("dropdown_logo1");
+    const dropdown2 = document.getElementById("dropdown_logo2");
+    const dropdown3 = document.getElementById("dropdown_logo3");
+    const dropdown4 = document.getElementById("dropdown_logo4");
+    const dropdown5 = document.getElementById("dropdown_logo5");
+    const popup1 = document.getElementById("popup1");
+    const popup2 = document.getElementById("popup2");
+    const popup3 = document.getElementById("popup3");
+    const popup4 = document.getElementById("popup4");
+    const popup5 = document.getElementById("popup5");
+    const popup = document.getElementsByClassName('popup')
+
+
+
+    function showorhide1() {
+        if (popup1.style.display == "flex") {
+            popup1.style.display = "none"
+            popup1.classList.add("slideup")
+            popup1.classList.remove("slidedown")
+            dropdown1.classList.add("rotateup")
+            dropdown1.classList.remove("rotatedown")
+        }
+        else {
+            popup1.style.display = "flex"
+            popup1.classList.remove("slideup")
+            popup1.classList.add("slidedown")
+            dropdown1.classList.add("rotatedown")
+            dropdown1.classList.remove("rotateup")
+        }
+    }
+    function showorhide2() {
+        if (popup2.style.display == "flex") {
+            popup2.style.display = "none"
+            popup2.classList.add("slideup")
+            popup2.classList.remove("slidedown")
+            dropdown2.classList.add("rotateup")
+            dropdown2.classList.remove("rotatedown")
+        }
+        else {
+            popup2.style.display = "flex"
+            popup2.classList.remove("slideup")
+            popup2.classList.add("slidedown")
+            dropdown2.classList.add("rotatedown")
+            dropdown2.classList.remove("rotateup")
+        }
+    }
+    function showorhide3() {
+        if (popup3.style.display == "flex") {
+            popup3.style.display = "none"
+            popup3.classList.add("slideup")
+            popup3.classList.remove("slidedown")
+            dropdown3.classList.add("rotateup")
+            dropdown3.classList.remove("rotatedown")
+        }
+        else {
+            popup3.style.display = "flex"
+            popup3.classList.remove("slideup")
+            popup3.classList.add("slidedown")
+            dropdown3.classList.add("rotatedown")
+            dropdown3.classList.remove("rotateup")
+        }
+    }
+    function showorhide4() {
+        if (popup4.style.display == "flex") {
+            popup4.style.display = "none"
+            popup4.classList.add("slideup")
+            popup4.classList.remove("slidedown")
+            dropdown4.classList.add("rotateup")
+            dropdown4.classList.remove("rotatedown")
+        }
+        else {
+            popup4.style.display = "flex"
+            popup4.classList.remove("slideup")
+            popup4.classList.add("slidedown")
+            dropdown4.classList.add("rotatedown")
+            dropdown4.classList.remove("rotateup")
+        }
+    }
+    function showorhide5() {
+        if (popup5.style.display == "flex") {
+            popup5.style.display = "none"
+            popup5.classList.add("slideup")
+            popup5.classList.remove("slidedown")
+            dropdown5.classList.add("rotateup")
+            dropdown5.classList.remove("rotatedown")
+
+
+        }
+        else {
+            popup5.style.display = "flex"
+            popup5.classList.remove("slideup")
+            popup5.classList.add("slidedown")
+            dropdown5.classList.add("rotatedown")
+            dropdown5.classList.remove("rotateup")
+        }
+    }
+
+    field_buttons1.addEventListener('click', showorhide1)
+    field_buttons2.addEventListener('click', showorhide2)
+    field_buttons3.addEventListener('click', showorhide3)
+    field_buttons4.addEventListener('click', showorhide4)
+    field_buttons5.addEventListener('click', showorhide5)
+
+
+
+
+</script>
