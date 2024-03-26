@@ -1,0 +1,372 @@
+#mymodal {
+  position: relative;
+  background-color: white;
+  width: 500px;
+  height: 630px;
+  margin: auto;
+  margin-top: -655px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  display: none;
+  border-radius: 5px;
+  border: 1px solid black;
+  flex-direction: column;
+}
+
+#mymodal2 {
+  position: relative;
+  background-color: white;
+  width: 500px;
+  height: 630px;
+  margin: auto;
+  margin-top: -655px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  border: 1px solid black;
+  flex-direction: column;
+  display: none;
+}
+
+.image {
+  width: 30px;
+  height: 30px;
+}
+
+.image2 {
+  width: 10px;
+  height: 10px;
+  margin-right: 4px;
+}
+
+.innerhead {
+  width: 460px;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  font-size: large;
+  font-weight: 500;
+}
+
+.modal_header {
+  width: 500px;
+  height: 40px;
+  background-color: rgb(120, 168, 183);
+  display: flex;
+  align-items: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 5px 5px 0px 0px;
+}
+
+.modal_content {
+  width: 500px;
+  height: 608px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#close_btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#close_btn2 {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+#content {
+  width: 460px;
+  height: 598px;
+  display: flex;
+  align-items: center;
+}
+
+#first_box {
+  width: 460px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-size: small;
+  font-weight: 700;
+}
+
+#second_box {
+  width: 460px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#third_box {
+  width: 460px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#fifth_box {
+  width: 460px;
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#fourth_box {
+  width: 460px;
+  height: 65px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#sixth_box {
+  width: 460px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: flex-end;
+}
+
+#main_box {
+  width: 460px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#sub_box {
+  height: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#type {
+  width: 460px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid black;
+  border-radius: 5px;
+}
+
+#type3 {
+  width: 460px;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid black;
+  border-radius: 5px;
+}
+
+#type1 {
+  width: 200px;
+  height: 25px;
+  display: flex;
+  align-items: center;
+  border: 0.5px solid black;
+  border-radius: 5px;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 460px;
+  height: 598px;
+}
+
+#save_btn {
+  position: relative;
+  height: 38px;
+  width: 115px;
+  font-size: small;
+  color: white;
+  border: 1px solid black;
+  background-color: rgb(64, 168, 146);
+  margin-right: 0px;
+  border-radius: 5px;
+}
+
+#save_btn2 {
+  position: relative;
+  height: 35px;
+  width: 115px;
+  font-size: small;
+  color: white;
+  border: 1px solid black;
+  background-color: rgb(64, 168, 146);
+  margin-right: 0px;
+  border-radius: 5px;
+}
+
+#apply {
+  position: relative;
+  height: 35px;
+  width: 90px;
+  font-size: medium;
+  color: rgb(217, 67, 26);
+  border: 0.5px solid rgb(236, 208, 201);
+  background-color: rgb(236, 208, 201);
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+}
+
+#event_editor {
+  position: relative;
+  background-color: white;
+  width: 500px;
+  height: 315px;
+  margin: auto;
+  margin-top: -506px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  border: 1px solid black;
+  display: none;
+  border-radius: 5px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#innerhead {
+  width: 450px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: large;
+}
+
+#innerhead2 {
+  width: 450px;
+  height: 225px;
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: large;
+  margin-bottom: -20px;
+}
+
+#innerhead2content {
+  width: 450px;
+  height: 185px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  font-size: large;
+  margin-bottom: -20px;
+}
+
+#innerhead1 {
+  width: 500px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  font-size: large;
+  border-radius: 5px 5px 0px 0px;
+  background-color: rgb(120, 168, 183);
+}
+
+#innerhead3 {
+  width: 500px;
+  height: 265px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#edit_btn {
+  position: relative;
+  height: 25px;
+  width: 38px;
+  font-size: small;
+  color: rgba(14, 68, 84, 0.81);
+  border: 0.5px solid rgb(120, 168, 183);
+  background-color: rgb(120, 168, 183);
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: -411px;
+}
+
+#delete {
+  position: relative;
+  height: 33px;
+  width: 95px;
+  font-size: medium;
+  color: rgb(217, 67, 26);
+  border: 0.5px solid rgb(236, 208, 201);
+  background-color: rgb(236, 208, 201);
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: -354px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+#date {
+  width: 450px;
+  height: 33px;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+}
+
+#time {
+  width: 450px;
+  height: 33px;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+}
+
+#location {
+  width: 450px;
+  height: 33px;
+  display: flex;
+  align-items: center;
+  font-size: medium;
+}
+
+#comment {
+  width: 450px;
+  height: 33px;
+  font-size: medium;
+  display: flex;
+  align-items: center;
+  color: rgb(194, 194, 194);
+}
